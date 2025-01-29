@@ -1,0 +1,109 @@
+html 5 exclusive tags:
+-> header
+-> footer
+-> section
+-> article
+-> audio
+
+3 assignments, html5 tags, prerequisites all topics, tailwind css, why console? its importance
+do example programs for each of the following
+1. simple if
+2. if-else
+3. else-if
+4. else-if ladder
+5. nested if
+
+-> js can be used as client side and server side
+-> react and angular are popular frameworks of js
+-> let, var, const
+-> let, var - value can be changed. const - value cannot be changed
+-> var - global scope. let - local scope
+-> es6 - ECMAScript - extended version of javascript known as ECMAScript
+-> arrow function - from es6 - for efficiency in terms of space - increase the readability - functions without name
+-> eg. document.getElementById("response").innerHTML = howareyou()
+     object           method                property
+-> OOPS - object oriented programming structure - eg. class: bird objects: parrot, pigeon, dove etc properties: colour, size, wings, etc. 
+behaviour(methods): flying, eating etc.
+-> JS objects - inbuilt methods - 1. keys, 2. values, 3. entries
+-> JS promise - promise is a javascript object - two states: resolved (success), rejected (failure)
+-> 1. invoking a function
+   2. callback
+-> Promise inbuilt methods - when there is more than one promise, in order to review them, we can use Promise inbuilt methods
+according to the requirement. 
+methods:-
+1. Promise.all - once it sees a promise false, it will stop
+2. Promise.any - gives the shortest time promise provided status is true
+3. Promise.allSettled - will display one among three states: fulfilled, rejected, pending
+4. Promise.race - displays the first executing promise, no matter if it is resolved or rejected. if two or more execute
+at the same time, first promise defined in the program is executed
+-> react.js - it is a library or framework of javascript. eg websites: Netflix, amazon eg of html websites: youtube, wikipedia
+-> 1. create a folder 2. open cmd 
+3. commands:
+node -v (check node version)
+npm -v (check npm version)	
+npx create-react-app app_name 
+npm start
+cd app-name
+code . (to open it in vscode)
+-> three important folders in react: 1. public 2. src 3. 
+-> three important files: 1. index.html 2. index.js 3. index.css
+note: initially write code in app.js
+-> react follows vdom (virtual dom). here, unlike html, once dom gets created the changes or manipulation what we do gets completed and only that part will be re rendered. whereas in html everytime we make change entire dom will be re rendered
+-> in web application created by react.js, each and everything is called as component. 1. functional component 2. class component
+-> JSX (javascript html) - writing html inside javascript
+-> props and states: every component will have props and states. props: it wont change eg. brand name (tatas bislery).
+ states: it changes or we can change it eg: water level in bottle.
+initial state: full, updated state: half, current state: empty
+-> flipkart website - homepage, grocery, mobile, fashion
+component name: mobiles. props: name, version, price. state: discount, stock available
+-> react hooks: earlier in IT industry they were using class components, reason being, state concept was not available with functional components.
+hooks is used to implement state in functional components. types of hooks: 1. useState 2. useEffect 3. useRef 4. useContext 5. useReducer
+best example for use state: Counter clock. Stating the initial state as 0, we can increment it, decrement it, reset it using useState hook
+-> spread operator - 
+-> useEffect - upon the condition or action we apply in our functional components monitoring the impact or side effects can be done using useEffect hook.
+useEffect accepts two arguments, one is callback function and second is the dependency array which is optional.
+note: callback function is like constructor in java
+-> useReducer - same as useState to manage or update states that is data that is values of component. difference is if you have more states or complex things u use useeducer hook
+step 1: create inc dec prog using useState
+step 2: replace useState with useReducer
+ - usereducer takes two arguments first is reducerfunction which says what u want to do (like increment or decrement), second is initial value of state
+ - usereducer returns array with two values like usestate
+ - first is that initial count and second is dispatch function we call them as state and dispatch. here state will hold initial value and updated once you call dispatch function and dispatch will trigger useReducer function
+ - redux - store - has all the states of components - slices - consists of action and reducing function. 
+
+ MongoDB:
+- NoSQL another eg. JSON  
+- unstructured data
+- Mongodb compass - helps to fetch data from mongodb server
+- mongosh - mongoshell is replaced with mongoose
+- two important terms - data modelling, schema
+- in sql - record, table in mogodb - document, collection
+- group of documents - collection - group of collections - database
+
+
+C:\Users\ASUS\AppData\Local\Programs\mongosh\
+
+create a db name computers. onecollection named laptops, fields: name, model, colour, status (available, not available), price, vendorname, vendor price. min 10 records. 
+q1. list out particular model laptops. status everything initially unavailable, change it to available.
+
+filter all the records with the price range 30k to 50k range and go with dell and add one more field,  shipping: yes
+
+id (num), name , age, city (all str)	
+
+$nin - not in - performs command if a value is not in a given array 
+$and - checks if both conditions are true eg. db.products.find($and:[{price: {$gt: 80000}, {brand: "apple"}}])
+$or - checks if one of the condition is true
+$exists (false or true): checks if the field exists or not
+aggregation (like groupby in mysql)
+eg. db.companies.aggregate([{$lookup: {from: 'employees', localField: "_id", foreignField: "company_id"} as:}])
+
+create a db called bank. create two collections under that. 1st collection: customer_personal, 2nd customer_account
+customer_personal: name (str), address (array), phone no. (object with two phone numbers), age
+customer_account: account_no (int), branch (str), bank_name (str), ifsc code (str), current_balance (float), account_type (savings or current), od (yes or no)
+
+filter only od category yes
+display only customers address where the branch names are same. 
+currentbalance: 10000 to 20000, filter and get only phone no
+filter only the savings account people complete details
+add a field called status: same for ifsc code same people
+
